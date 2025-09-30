@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a2a3a, #0c141f);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #ff9800;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #000;
+    color: #ff9800;
+}
+
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.member.card {
+    display: flex;
+    align-items: flex-start; /* ou center pour centrer verticalement */
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.photo.section {
+    flex-shrink: 0; /* empêche la photo de rétrécir */
+}
+
+.photo.section img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info-section {
+    flex: 1; /* prend tout l'espace restant */
+}
+
+.info-section strong {
+    color: #4fc3f7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .members-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .member.card {
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem;
+    }
+    
+    .photo.section {
+        height: 180px; /* Réduit légèrement la hauteur sur mobile */
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo.section {
+        height: 160px;
+    }
+    
+    .members-container {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
