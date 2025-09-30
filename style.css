@@ -34,7 +34,7 @@ header h1 {
 
 .member.card {
     display: flex;
-    align-items: center; /* ou center pour centrer verticalement */
+    align-items: stretch; /* ou center pour centrer verticalement */
     gap: 20px;
     padding: 15px;
     border: 1px solid #ddd;
